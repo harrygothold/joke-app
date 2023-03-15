@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { IJokeResponse } from "../../types/api";
-import useBlacklist from "../useBlacklist";
-import useCategory from "../useCategory";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { IJokeResponse } from '../../types/api';
+import useBlacklist from '../useBlacklist';
+import useCategory from '../useCategory';
 
 interface IUseJokesReturn {
   joke: IJokeResponse | null;
@@ -30,6 +30,7 @@ const useJokes = (): IUseJokesReturn => {
 
   useEffect(() => {
     getJokes();
+    /* eslint-disable react-hooks/exhaustive-deps */
   }, []);
 
   return { joke, refetch };
