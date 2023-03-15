@@ -12,7 +12,7 @@ const useJokes = (): IUseJokesReturn => {
 
   const getJokes = async () => {
     const res = await axios.get<IJokeResponse>(
-      `${process.env.REACT_APP_JOKE_API}`
+      process.env.REACT_APP_JOKE_API as string
     );
     setJoke(res.data);
   };

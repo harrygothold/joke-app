@@ -1,10 +1,10 @@
-import { screen, render } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import Button, { IButtonProps } from '.';
+import { screen, render } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import Button, { IButtonProps } from ".";
 
 const defaultProps: IButtonProps = {
   onClick: jest.fn(),
-  type: 'button',
+  type: "button",
 };
 
 const setup = (props: Partial<IButtonProps> = {}) =>
@@ -14,27 +14,27 @@ const setup = (props: Partial<IButtonProps> = {}) =>
     </Button>
   );
 
-describe('Button', () => {
-  it('should render without error', () => {
+describe("Button", () => {
+  it("should render without error", () => {
     setup();
 
-    expect(screen.getByText('Test Button')).toBeInTheDocument();
+    expect(screen.getByText("Test Button")).toBeInTheDocument();
   });
 
-  it('should call `onClick` when clicked', () => {
+  it("should call `onClick` when clicked", () => {
     setup();
 
-    const button = screen.getByText('Test Button');
+    const button = screen.getByText("Test Button");
     userEvent.click(button);
 
     expect(defaultProps.onClick).toHaveBeenCalled();
   });
 
-  it('should render the correct type', () => {
+  it("should render the correct type", () => {
     setup();
 
-    const button = screen.getByText('Test Button') as HTMLButtonElement;
+    const button = screen.getByText("Test Button");
 
-    expect(button.type).toEqual('button');
+    expect(button.getAttribute("type")).toEqual("button");
   });
 });

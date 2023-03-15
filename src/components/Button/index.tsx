@@ -1,7 +1,7 @@
-import { ButtonHTMLAttributes } from 'react';
-import './index.scss';
+import { ButtonHTMLAttributes } from "react";
+import "./index.scss";
 
-const ROOT_CLASSNAME = 'Button';
+const ROOT_CLASSNAME = "Button";
 
 export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 

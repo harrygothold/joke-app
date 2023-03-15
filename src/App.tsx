@@ -1,12 +1,12 @@
-import './App.css';
-import Button from './components/Button';
-import useJokes from './utils/hooks/useJokes';
-import useToggle from './utils/hooks/useToggle';
+import "./App.css";
+import Button from "./components/Button";
+import useJokes from "./utils/hooks/useJokes";
+import useToggle from "./utils/hooks/useToggle";
 
 const App = () => {
   const { joke, refetch } = useJokes();
   const { toggle: showPunchline, setToggle } = useToggle();
-  const buttonText = showPunchline ? 'Next Joke' : 'Reveal Punchline';
+  const buttonText = showPunchline ? "Next Joke" : "Reveal Punchline";
 
   const handleClick = async () => {
     if (showPunchline) {
@@ -19,12 +19,17 @@ const App = () => {
 
   return (
     <div className="App">
-      {joke ? (
+      {joke !== null ? (
         <div>
           <h1>Joke App</h1>
           <p>{joke.setup}</p>
           {showPunchline && <p>{joke.delivery} 🤣</p>}
-          <Button onClick={() => handleClick()} type="button">
+          <Button
+            onClick={async () => {
+              await handleClick();
+            }}
+            type="button"
+          >
             {buttonText}
           </Button>
         </div>
