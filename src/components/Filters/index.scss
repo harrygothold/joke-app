@@ -1,0 +1,12 @@
+.Filters {
+  ul {
+    list-style: none;
+    display: flex;
+    li {
+      margin: 10px;
+    }
+    label {
+      display: flex;
+    }
+  }
+}
