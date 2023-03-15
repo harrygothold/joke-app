@@ -1,22 +1,22 @@
-import { ChangeEvent, InputHTMLAttributes } from 'react';
-import { IFilterOption, TCategory } from '../../utils/types/filters';
-import './index.scss';
+import { ChangeEvent, InputHTMLAttributes } from "react";
+import { IFilterOption, TCategory } from "../../utils/types/filters";
+import "./index.scss";
 
 export interface IFiltersProps {
   title: string;
   options: IFilterOption[];
   handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  filterType?: InputHTMLAttributes<HTMLInputElement>['type'];
+  filterType?: InputHTMLAttributes<HTMLInputElement>["type"];
   selectedValue?: TCategory | string;
 }
 
-const ROOT_CLASSNAME = 'Filters';
+const ROOT_CLASSNAME = "Filters";
 
 const Filters = ({
   title,
   options,
   handleChange,
-  filterType = 'checkbox',
+  filterType = "checkbox",
   selectedValue,
 }: IFiltersProps) => {
   return (
@@ -33,7 +33,7 @@ const Filters = ({
                 name={option.value}
                 id={option.value}
                 onChange={handleChange}
-                {...(filterType === 'radio' && {
+                {...(filterType === "radio" && {
                   checked: selectedValue === option.value ?? option.default,
                 })}
               />

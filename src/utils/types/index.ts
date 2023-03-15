@@ -1,4 +1,4 @@
-import { ChangeEvent, Dispatch, SetStateAction } from 'react';
+import { ChangeEvent, Dispatch, SetStateAction } from "react";
 
 export type TStateDispatch<T> = Dispatch<SetStateAction<T>>;
 

@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { TInputChange } from '../../types';
-import { TBlacklistFilters } from '../../types/filters';
+import { useState } from "react";
+import { TInputChange } from "../../types";
+import { TBlacklistFilters } from "../../types/filters";
 
 interface IUseBlacklistReturn {
   blacklist: TBlacklistFilters[];

@@ -1,19 +1,19 @@
 export type TBlacklistFilters =
-  | 'nsfw'
-  | 'religious'
-  | 'political'
-  | 'racist'
-  | 'sexist'
-  | 'explicit';
+  | "nsfw"
+  | "religious"
+  | "political"
+  | "racist"
+  | "sexist"
+  | "explicit";
 
 export type TCategory =
-  | 'Any'
-  | 'Programming'
-  | 'Misc'
-  | 'Dark'
-  | 'Pun'
-  | 'Spooky'
-  | 'Christmas';
+  | "Any"
+  | "Programming"
+  | "Misc"
+  | "Dark"
+  | "Pun"
+  | "Spooky"
+  | "Christmas";
 
 export interface IFilterOption {
   label: string;

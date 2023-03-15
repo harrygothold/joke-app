@@ -1,11 +1,11 @@
-import { TCategory } from '../utils/types/filters';
+import { TCategory } from "../utils/types/filters";
 
 export const categoryData: TCategory[] = [
-  'Any',
-  'Christmas',
-  'Dark',
-  'Misc',
-  'Programming',
-  'Pun',
-  'Spooky',
+  "Any",
+  "Christmas",
+  "Dark",
+  "Misc",
+  "Programming",
+  "Pun",
+  "Spooky",
 ];

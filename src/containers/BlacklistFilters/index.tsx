@@ -1,8 +1,8 @@
-import { ChangeEvent } from 'react';
-import Filters from '../../components/Filters';
-import { blacklistData } from '../../data/blacklist';
-import { createFiltersList } from '../../utils/filters';
-import { TBlacklistFilters } from '../../utils/types/filters';
+import { ChangeEvent } from "react";
+import Filters from "../../components/Filters";
+import { blacklistData } from "../../data/blacklist";
+import { createFiltersList } from "../../utils/filters";
+import { TBlacklistFilters } from "../../utils/types/filters";
 
 interface IBlacklistFiltersProps {
   handleChange: (event: ChangeEvent<HTMLInputElement>) => void;

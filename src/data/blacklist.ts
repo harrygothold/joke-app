@@ -1,10 +1,10 @@
-import { TBlacklistFilters } from '../utils/types/filters';
+import { TBlacklistFilters } from "../utils/types/filters";
 
 export const blacklistData: TBlacklistFilters[] = [
-  'nsfw',
-  'religious',
-  'political',
-  'racist',
-  'sexist',
-  'explicit',
+  "nsfw",
+  "religious",
+  "political",
+  "racist",
+  "sexist",
+  "explicit",
 ];

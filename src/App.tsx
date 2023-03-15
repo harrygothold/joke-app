@@ -1,11 +1,11 @@
-import './App.scss';
-import Button from './components/Button';
-import BlacklistFilters from './containers/BlacklistFilters';
-import CategoryFilter from './containers/CategoryFilters';
-import useBlacklist from './utils/hooks/useBlacklist';
-import useCategory from './utils/hooks/useCategory';
-import useJokes from './utils/hooks/useJokes';
-import useToggle from './utils/hooks/useToggle';
+import "./App.scss";
+import Button from "./components/Button";
+import BlacklistFilters from "./containers/BlacklistFilters";
+import CategoryFilter from "./containers/CategoryFilters";
+import useBlacklist from "./utils/hooks/useBlacklist";
+import useCategory from "./utils/hooks/useCategory";
+import useJokes from "./utils/hooks/useJokes";
+import useToggle from "./utils/hooks/useToggle";
 
 const App = () => {
   const { joke, refetch } = useJokes();
@@ -14,7 +14,7 @@ const App = () => {
   const { category, handleCategoryChange } = useCategory();
 
   const { toggle: showPunchline, setToggle } = useToggle();
-  const buttonText = showPunchline ? 'Next Joke' : 'Reveal Punchline';
+  const buttonText = showPunchline ? "Next Joke" : "Reveal Punchline";
 
   const handleClick = async () => {
     if (showPunchline) {
