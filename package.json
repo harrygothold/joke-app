@@ -27,10 +27,10 @@
     "pretty": "npx prettier --write ."
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
+    "**/*.{ts,tsx}": [
       "yarn lint"
     ]
-},
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

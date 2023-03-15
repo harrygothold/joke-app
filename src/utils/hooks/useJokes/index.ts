@@ -1,6 +1,6 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { IJokeResponse } from '../../types/api';
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { IJokeResponse } from "../../types/api";
 
 interface IUseJokesReturn {
   joke: IJokeResponse | null;
